@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block content %}
+
+{% set_global data = load_data(path="content/projects/data.toml", format="toml") %}
+{%- set base_url_lang = get_url(path="", lang=lang) %}
+
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+<hr>
+<div id="project-list">
+  {% for project in data.project %}
+  <article class="project-item">
+    <h2>{{ project.name }}</h2>
+    <p>{{ project.desc | markdown(inline=true) | safe }}</p>
+    <div class="tags">
+      {% for tag in project.tags %}
+      <span>#{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <div class="links">
+      {% for link in project.links %}
+      <a href="{{ link.url | replace(from=`$BASE_URL`, to=base_url_lang) | escape_xml | safe }}" rel="noopener"
+        target="_blank">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endblock content %}

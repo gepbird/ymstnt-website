@@ -1,0 +1,16 @@
+{% extends "article_list.html" %}
+
+{% block content %}
+{{ super() }}
+{%- set posts_section = get_section(path="posts/_index.md") -%}
+{%- set number_of_posts = posts_section.pages | length -%}
+{%- set pages = posts_section.pages -%}
+
+<div class="h-card hidden">
+  <img class="u-photo" alt="ymstnt" src="{{get_url(path="card.png",cachebust=true)}}" />
+  <a class="p-name u-url" href="{{ config.base_url }}">
+    {{ config.author }}
+  </a>
+  <p class="p-note">{{ config.extra.bio }}</p>i
+</div>
+{% endblock content %}

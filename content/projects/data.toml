@@ -1,0 +1,24 @@
+[[project]]
+name = "moe"
+desc = "A multi-purpose Discord bot made together with a friend, written in C#."
+tags = ["discord-bot", "csharp"]
+links = [
+    { name = "GitHub", url = "https://github.com/ymstnt-com/moe" },
+]
+
+[[project]]
+name = "website"
+desc = "The very website you're looking at. Made using Zola SSG and Duckquill as theme."
+tags = ["website"]
+links = [
+    { name = "GitHub", url = "https://github.com/ymstnt/website" },
+]
+
+[[project]]
+name = "ymstnt.com"
+desc = "My old website, unmaintained."
+tags = ["website", "unmaintained"]
+links = [
+    { name = "GitHub", url = "https://github.com/ymstnt/ymstnt.com" },
+    { name = "Homepage", url = "https://ymstnt.com" },
+]
