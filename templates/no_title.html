@@ -1,0 +1,4 @@
+{% extends "page.html" %} {% block content %} {% set_global data =
+load_data(path="content/projects/data.toml", format="toml") %} {%- set
+base_url_lang = get_url(path="", lang=lang) %} {{ section.content | safe }} {%
+endblock content %}
