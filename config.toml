@@ -1,6 +1,6 @@
 # The URL the site will be built for
 title = "ymstnt"
-base_url = "https://ymstnt.dev"
+base_url = "https://blog.ymstnt.com"
 description = "ymstnt's personal website"
 default_language = "en"
 
