@@ -47,7 +47,7 @@ styles = [
   "mods.css",
 ]
 # Put all your custom variables here
-default_theme = "dark"
+# default_theme = "dark"
 accent_color = "#006BB6"
 
 katex = false
@@ -56,8 +56,8 @@ toc = true
 toc_inline = true
 toc_ordered = true
 
-issues_url = "https://github.com/ymstnt/ymstnt.dev/issues"
-source_url = "https://github.com/ymstnt/ymstnt.dev"
+issues_url = "https://github.com/ymstnt/website/issues"
+source_url = "https://github.com/ymstnt/website"
 
 show_copy_button = true
 show_reading_time = false
@@ -76,7 +76,8 @@ show_repo = false
 links = [
   { url = "@/about/_index.md", name = "About" },
   { url = "@/projects/_index.md", name = "Projects" },
-  { url = "https://ymstnt.com", name = "ymstnt.com", external = true}
+  { url = "@/uni/_index.md", name = "University" },
+  { url = "https://gd.tchfoo.com", name = "gepDrive", external = true}
 ]
 
 [extra.footer]

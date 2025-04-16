@@ -11,7 +11,8 @@ date_locale = "en_US"
 # Should match the names in config.extra.nav.links and config.extra.footer.links.
 About="About"
 Projects="Projects"
-ymstnt.com="ymstnt.com"
+University="University"
+gepDrive="gepDrive"
 
 all_tags = "See all tags"
 archived = "Archived"

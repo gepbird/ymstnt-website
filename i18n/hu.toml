@@ -11,7 +11,8 @@ date_locale = "hu_HU"
 # Should match the names in config.extra.nav.links and config.extra.footer.links.
 About="Rólam"
 Projects="Projektek"
-ymstnt.com="ymstnt.com"
+University="Egyetem"
+gepDrive="gepDrive"
 
 all_tags = "Összes címke"
 archived = "Archivált"
