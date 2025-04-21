@@ -20,6 +20,8 @@ let currentDate = new Date();
 
 let weekNumberElement = document.querySelector("#week-number");
 
+const lang = document.documentElement.lang;
+
 function checkDateBefore() {
   console.log(currentDate.getDay());
   let isInExamPeriod = examPeriods.some(
@@ -30,12 +32,20 @@ function checkDateBefore() {
   );
 
   if (isInExamPeriod) {
-    weekNumberElement.innerText = "Exams - break";
+    if (lang === "hu") {
+      weekNumberElement.innerText = "Vizsgaidőszak - szünet";
+    } else {
+      weekNumberElement.innerText = "Exams - break";
+    }
     weekNumberElement.style.fontSize = "1.2em";
   } else if (isInStudyPeriod) {
     calculateWeekNumber(getFirstStudyPeriodDay());
   } else {
-    weekNumberElement.innerText = "Break";
+    if (lang === "hu") {
+      weekNumberElement.innerText = "Szünet";  
+    } else {
+      weekNumberElement.innerText = "Break";
+    }
     weekNumberElement.style.fontSize = "1.2em";
   }
 }
@@ -59,18 +69,20 @@ function calculateWeekNumber(firstWeek) {
   let weeksPassed = Math.floor(timeDifference / oneWeekInMilliseconds) + 1;
 
   let suffix = ".";
-  switch (weeksPassed) {
-    case 1:
-      suffix = "st";
-      break;
-    case 2:
-      suffix = "nd";
-      break;
-    case 3:
-      suffix = "rd";
-      break;
-    default:
-      suffix = "th";
+  if (lang === "en") {
+    switch (weeksPassed) {
+      case 1:
+        suffix = "st";
+        break;
+      case 2:
+        suffix = "nd";
+        break;
+      case 3:
+        suffix = "rd";
+        break;
+      default:
+        suffix = "th";
+    }
   }
 
   weekNumberElement.innerText = weeksPassed.toString() + suffix;

@@ -7,4 +7,4 @@ template = "no_title.html"
 
 <h1 id="week-number"></h1>
 
-<script src="/js/uni-hu.js"></script>
+<script src="/js/uni.js"></script>
