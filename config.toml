@@ -76,7 +76,10 @@ show_repo = false
 links = [
   { url = "@/about/_index.md", name = "About" },
   { url = "@/projects/_index.md", name = "Projects" },
-  { url = "@/uni/_index.md", name = "University" },
+  { name = "Utilities", menu = [
+      { url = "@/uni/_index.md", name = "University" },
+      { url = "@/erettsegi/_index.md", name = "Finals" }
+  ] },
   { url = "https://gd.tchfoo.com", name = "gepDrive", external = true}
 ]
 
