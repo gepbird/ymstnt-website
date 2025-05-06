@@ -7,4 +7,4 @@ template = "no_title.html"
 
 <h1 id="week-number"></h1>
 
-<script src="/js/uni.js"></script>
+<script src="https://cdn.statically.io/gh/ymstnt/uni-week-counter/main/script.js"></script>
