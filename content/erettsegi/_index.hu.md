@@ -119,6 +119,10 @@ button:disabled:hover {
               Informatikai ismeretek (ágazati)
             </option>
             <option value="digkult" id="digkult">Digitális kultúra</option>
+            <option value="bio" id="bio">Biológia</option>
+            <option value="fldr" id="fldr">Földrajz</option>
+            <option value="kem" id="kem">Kémia</option>
+            <option value="fiz" id="fiz">Fizika</option>
           </select>
         </div>
         <br />
