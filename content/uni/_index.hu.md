@@ -5,6 +5,6 @@ template = "no_title.html"
 
 # Jelenlegi hét:
 
-<h1 id="week-number"></h1>
+<h3 id="week-number"></h3>
 
-<script src="https://cdn.statically.io/gh/ymstnt/uni-week-counter/main/script.js"></script>
+<script src="/js/uni.js"></script>
