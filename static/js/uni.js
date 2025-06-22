@@ -18,12 +18,20 @@ async function getCurrentWeek(
   daysLeftBreak = true,
   daysLeftExams = true
 ) {
-  const url = new URL("https://uwc.ymstnt.com/uniWeekCount");
+  const url = new URL("https://uwc.ymstnt.com/uwc");
 
   url.searchParams.append("lang", lang);
-  url.searchParams.append("numberOnly", numberOnly);
-  url.searchParams.append("daysLeftBreak", daysLeftBreak);
-  url.searchParams.append("daysLeftExams", daysLeftExams);
+  // Only append the parameters if they are true
+  if (daysLeftBreak) {
+    url.searchParams.append("days-left-break", "");
+  }
+  if (daysLeftExams) {
+    url.searchParams.append("days-left-exam", "");
+  }
+
+  if (numberOnly) {
+    url.searchParams.append("numberOnly", "true");
+  }
 
   const response = await fetch(url, {
     method: "GET",
