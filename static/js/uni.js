@@ -16,7 +16,8 @@ async function getCurrentWeek(
   lang = "en",
   numberOnly = false,
   daysLeftBreak = true,
-  daysLeftExams = true
+  daysLeftExams = true,
+  appendWeek = true
 ) {
   const url = new URL("https://uwc.ymstnt.com/uwc");
 
@@ -30,7 +31,11 @@ async function getCurrentWeek(
   }
 
   if (numberOnly) {
-    url.searchParams.append("numberOnly", "true");
+    url.searchParams.append("number-only", "");
+  }
+
+  if (appendWeek) {
+    url.searchParams.append("append-week", "");
   }
 
   const response = await fetch(url, {
