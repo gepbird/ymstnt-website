@@ -20,3 +20,4 @@ jobs:
         run: zola build --output-dir $OUT_DIR
       #- name: Fix perms for nginx
       #  run: chmod -R 755 $OUT_DIR
+
