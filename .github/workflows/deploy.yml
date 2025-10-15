@@ -15,7 +15,7 @@ jobs:
       with:
         submodules: true
     - name: Build
-      run: zola build --output-dir $OUT_DIR
+      run: zola build --output-dir $OUT_DIR --force
       #- name: Fix perms for nginx
       #  run: chmod -R 755 $OUT_DIR
 
