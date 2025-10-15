@@ -15,10 +15,11 @@ jobs:
         node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v5
-        submodules: true
-      - name: Build
-        run: zola build --output-dir $OUT_DIR
+    - uses: actions/checkout@v5
+      with:
+      - submodules: true
+    - name: Build
+      run: zola build --output-dir $OUT_DIR
       #- name: Fix perms for nginx
       #  run: chmod -R 755 $OUT_DIR
 
