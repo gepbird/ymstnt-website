@@ -1,0 +1,22 @@
+name: push_cd
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build
+        run: zola build --output-dir $OUT_DIR
+      #- name: Fix perms for nginx
+      #  run: chmod -R 755 $OUT_DIR
